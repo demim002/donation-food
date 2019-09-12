@@ -1,0 +1,19 @@
+{% extends "foodie/header.html" %}
+
+{% block content %}
+
+  <div class="row center-align">
+      {% for post in postings%}
+        <div class="col s12 m2">
+          <div class="card pink">
+            <div class="card-content white-text">
+              <span class="card-title">{{post.posting_title}}</span>
+              <p>{{post.posting_date}}</p>
+              <p>{{post.posting_context}}</p>
+            </div>
+            </div>
+          </div>
+    {% endfor %}
+  </div>
+
+  {% endblock %}
