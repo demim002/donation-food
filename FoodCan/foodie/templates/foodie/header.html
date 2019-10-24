@@ -1,0 +1,42 @@
+<html>
+<style>
+    body { text-align: center;
+         background-color: pink;
+       }
+  </style>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Food donate </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/register">register</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+{% if messages %}
+  {% for message in messages %}
+    <script>M.toast({html: "{{message}}", classes: 'red rounded', displayLength:2000});</script>
+  {% endfor %}
+{% endif %}
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

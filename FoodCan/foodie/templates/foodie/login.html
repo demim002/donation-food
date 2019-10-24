@@ -1,0 +1,24 @@
+{% extends 'foodie/header.html' %}
+
+{% block content %}
+<style>
+body {
+    text-align: center;
+}
+form {
+    display: inline-block;
+}
+</style>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button style="background-color:#32CD32; color:red"
+          class="btn btn-outline-info" type="submit">Login</button>
+
+    </form>
+</body>
+
+
+{% endblock %}
